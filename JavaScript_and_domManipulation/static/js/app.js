@@ -29,6 +29,7 @@ function UFOSightingSearchDate(event) {
 
     // Clear Current data in 'UFO table'
     tbody.text(" ");
+    tableArea.select("h1").text(" ");
 
     // Select html of input date text
     var inputElement = d3.select("#datetime");
