@@ -18,8 +18,8 @@ mongo = PyMongo(app)
 # 3. Define what to do when a user hits the index route
 @app.route("/")
 def home():
-    scrape_dictionary = mongo.db.listings.find_one()
-    return render_template("mission_to_mars_index.html", listings=scrape_dictionary)
+    scrape_dictionary = mongo.db.scrape_dictionary.find_one()
+    return render_template("mission_to_mars_index.html", scrape_dictionary=scrape_dictionary)
 
 
 @app.route("/scrape")
